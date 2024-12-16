@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  m_GroupName: Data
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3a57743e526eced4f8eb50b46260e579
+  m_SerializeEntries:
+  - m_GUID: aed8fcb0cff78164086352ee70b52663
+    m_Address: Data/Bear
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 03160a762862fc54eaa932323527a9f0
+    m_Address: Data/Chick
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42e6d8406583db545aee2a6364a8f624
+    m_Address: Data/Chicken
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4eaa28c52db7762449a5df5fdae340d1
+    m_Address: Data/Cow
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ceac5410b94665943b07d39da3cbfdcc
+    m_Address: Data/Duck
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60b3a6394e7863e4495226554f770fb0
+    m_Address: Data/Bomb
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterData
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 36441964ffd0bbc4d9f974bbe2ee9fe1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a4943b77e87c1be4cb33515aff4c3eb8, type: 2}
+    - {fileID: 11400000, guid: 192ddcf6afcc9dd49bf0f8811f9b7c8b, type: 2}

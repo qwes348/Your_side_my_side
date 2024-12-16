@@ -1,0 +1,210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Characters
+  m_EditorClassIdentifier: 
+  m_GroupName: Characters
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 51d57d1bad1d9d949b5cbfad6a9ea12e
+  m_SerializeEntries:
+  - m_GUID: 99c6dea90e54ddc4ea9ed7edce9bb7a8
+    m_Address: Art/chicken
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e75c286fe5db6f48a1df148b28be394
+    m_Address: Art/narwhal
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9aaf3b11128844545a03367853abe6b0
+    m_Address: Art/penguin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a73e3314ce9263642b549332babf3b69
+    m_Address: Art/monkey
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a35c528e1f10b34fad3c05c28e419ab
+    m_Address: Art/goat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c3355399bf74fd4791333b1eb038c44
+    m_Address: Art/whale
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86f77360a8fcae04fa046346d7db7035
+    m_Address: Art/hippo
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31808c5ba50366649ae3e2f670a6c7af
+    m_Address: Art/sloth
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 419a1df0cb628bc46a77f029b21ae7e4
+    m_Address: Art/elephant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b64c5500e11baf40b83d92266f205ec
+    m_Address: Art/panda
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b73ab0a73fa8c1743b3b037da1d8d2b5
+    m_Address: Art/moose
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92a3c9369f2944748bdb2aab3809ecbf
+    m_Address: Art/rabbit
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aafd2364d31ed214f82c05691ccf95e1
+    m_Address: Art/horse
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f46ff99fda692b3459b7834dd9afc7c1
+    m_Address: Art/pig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1890963a6ca2fcc46bf76f454383f868
+    m_Address: Art/parrot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd5d257a00c4f87439b867885a63d820
+    m_Address: Art/duck
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b15b7081c0f8fc4fb536f784d53e010
+    m_Address: Art/frog
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd7ae0dd7859e4e4dbe3b420694755e2
+    m_Address: Art/giraffe
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b23e64c306c6a274f905b0b614b0d63a
+    m_Address: Art/gorilla
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd5dee8f021e0294eb32ebbe3270b208
+    m_Address: Art/buffalo
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d34d4c8b87f3bd14799e42f9bc435424
+    m_Address: Art/crocodile
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a20429f657545f9409b5f39c4936ed53
+    m_Address: Art/rhino
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dec96629b1a9d0439070ae0b6e59857
+    m_Address: Art/cow
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c617ac0a736f8af4cbf8c2cf7c8b045b
+    m_Address: Art/owl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbcf3826494850948816cf714f3f5ac5
+    m_Address: Art/dog
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62912fea38db8ed41b09ebb720e4d82d
+    m_Address: Art/zebra
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6be40b90dfe6e6f49b2cc339be1be487
+    m_Address: Art/walrus
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69554516d46931c49875ed075a74adf0
+    m_Address: Art/bear
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a26a4bb5deeed1042a380eaf300bb1d3
+    m_Address: Art/snake
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14031711e67f950448d366e7170cf9ef
+    m_Address: Art/chick
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c781abda352c20a4dbbb0bc073d781a0
+    m_Address: Art/bomb
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 36441964ffd0bbc4d9f974bbe2ee9fe1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: bb4b5769100c0c34db16e5bcc6f752db, type: 2}
+    - {fileID: 11400000, guid: 634dccc5199f41f499eb949563127bc8, type: 2}
