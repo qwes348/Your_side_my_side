@@ -9,6 +9,8 @@ public class Define
     
     public const int MAX_CHARACTERS_COUNT = 50;
     public const float SPECIAL_PROBABILITY = 0.02f;
+    public static readonly Vector3 CORRECT_ANSWER_ANIM_POS_LEFT = new Vector3(-1.5f, -3.5f, 0);
+    public static readonly Vector3 CORRECT_ANSWER_ANIM_POS_RIGHT = new Vector3(1.5f, -3.5f, 0);
     #endregion
 
     #region enum
@@ -20,7 +22,7 @@ public class Define
         Score
     }
 
-    public enum CharacterType
+    public enum CharacterClass
     {
         None = -1,
         Normal,
@@ -46,6 +48,12 @@ public class Define
         Whale,
         Zebra,
         Bomb = 100
+    }
+
+    public enum InputType
+    {
+        Left,
+        Right
     }
     #endregion
 }

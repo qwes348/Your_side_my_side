@@ -1,8 +1,11 @@
 using Cysharp.Threading.Tasks;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
+[Serializable]
 public class PoolManager
 {
     [SerializeField]
@@ -20,6 +23,9 @@ public class PoolManager
             go = new GameObject("@PoolParent");
         }
         poolParent = go.transform;
+
+        poolDictionary = new Dictionary<string, Stack<Poolable>>();
+        currentActivePoolables = new List<Poolable>();
     }
 
     /* 프리팹 또는 같은 오브젝트를 파라미터로 받아서
@@ -141,9 +147,13 @@ public class PoolManager
                 return returnObj;
             }
         }
+        else
+        {
+            // 풀에 없다면 풀을 만듦
+            poolDictionary.Add(id, new Stack<Poolable>());
+        }
         
-        // 풀에 없다면 풀을 만들고 새로생성해서 반환해줌
-        poolDictionary.Add(id, new Stack<Poolable>());
+        // 새로생성해서 반환해줌
         returnObj = await Managers.Resource.InstantiateAsset<Poolable>(id);
         returnObj.gameObject.SetActive(false);
         returnObj.isUsing = true;

@@ -197,7 +197,7 @@ MonoBehaviour:
     m_SerializedLabels:
     - Sprite
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c781abda352c20a4dbbb0bc073d781a0
+  - m_GUID: 2169984bd9d3d2448a0048d1b43fcbb8
     m_Address: Art/bomb
     m_ReadOnly: 0
     m_SerializedLabels: []

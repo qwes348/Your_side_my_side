@@ -9,16 +9,17 @@ public class Managers : MonoBehaviour
     static Managers Instance { get { Init(); return instance; } }
 
     #region managers
-    PoolManager pool = new PoolManager();
+    [SerializeField]
+    private PoolManager pool = new PoolManager();
     public static PoolManager Pool => Instance.pool;
 
     // GameManager _game = new GameManager();
     // public static GameManager Game { get { return Instance._game; } }
 
-    CoroutineManager co = new CoroutineManager();
+    private CoroutineManager co = new CoroutineManager();
     public static CoroutineManager Co => Instance.co;
 
-    ResourceManager resource = new ResourceManager();
+    private ResourceManager resource = new ResourceManager();
     public static ResourceManager Resource => Instance.resource;
 
     // AudioManager _audio = new AudioManager();
