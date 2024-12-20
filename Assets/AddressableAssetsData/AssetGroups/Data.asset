@@ -53,6 +53,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - CharacterData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 651f5075c8e69d242b77ceb51df2273b
+    m_Address: Data/Giraffe
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 36441964ffd0bbc4d9f974bbe2ee9fe1, type: 2}
   m_SchemaSet:

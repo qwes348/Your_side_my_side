@@ -6,8 +6,7 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "New Character", menuName = "ScriptableObject/Character")]
 public class CharacterData : ScriptableObject
 {
-    [FormerlySerializedAs("type")]
-    public Define.CharacterClass @class;
-    public Define.Character character;
+    public Define.CharacterClass characterClass;
+    public Define.Character characterType;
     public int score;
 }

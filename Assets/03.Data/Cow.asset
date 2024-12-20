@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fd57c5b80e5d84a8ad1452c52ad02f, type: 3}
   m_Name: Cow
   m_EditorClassIdentifier: 
-  type: 0
-  character: 3
-  score: 1000
+  characterClass: 0
+  characterType: 3
+  score: 100

@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
-public class HorizontalInputButton : MonoBehaviour
+namespace Ysms.Game
 {
-    public Define.InputType inputType;
-    
-    private void Awake()
+    [RequireComponent(typeof(Button))]
+    public class HorizontalInputButton : MonoBehaviour
     {
-        GetComponent<Button>().onClick.AddListener(() => StageManager.Instance.CheckAnswer(inputType));
+        public Define.InputType inputType;
+
+        private void Awake()
+        {
+            GetComponent<Button>().onClick.AddListener(() => GameBoard.Instance.OnAnswerInput(inputType));
+        }
     }
 }

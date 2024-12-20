@@ -4,39 +4,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GameInput : MonoBehaviour
+namespace Ysms.Game
 {
-    private MainInputAction mainAction;
-    private InputAction horizontalAction;
-
-    private void Awake()
+    public class GameInput : MonoBehaviour
     {
-        mainAction = new MainInputAction();
-        horizontalAction = mainAction.InGame.Horizontal;
-    }
+        private MainInputAction mainAction;
+        private InputAction horizontalAction;
 
-    private void OnEnable()
-    {
-        mainAction.Enable();
-        horizontalAction.started += HorizontalInput;
-    }
-
-    private void OnDisable()
-    {
-        mainAction.Disable();
-        horizontalAction.started -= HorizontalInput;
-    }
-
-    private void HorizontalInput(InputAction.CallbackContext context)
-    {
-        Vector2 inputVec = context.ReadValue<Vector2>();
-        if (inputVec == Vector2.left)
+        private void Awake()
         {
-            StageManager.Instance.CheckAnswer(Define.InputType.Left);
+            mainAction = new MainInputAction();
+            horizontalAction = mainAction.InGame.Horizontal;
         }
-        else if(inputVec == Vector2.right)
+
+        private void OnEnable()
         {
-            StageManager.Instance.CheckAnswer(Define.InputType.Right);
+            mainAction.Enable();
+            horizontalAction.started += HorizontalInput;
+        }
+
+        private void OnDisable()
+        {
+            mainAction.Disable();
+            horizontalAction.started -= HorizontalInput;
+        }
+
+        private void HorizontalInput(InputAction.CallbackContext context)
+        {
+            Vector2 inputVec = context.ReadValue<Vector2>();
+            if (inputVec == Vector2.left)
+            {
+                GameBoard.Instance.OnAnswerInput(Define.InputType.Left);
+            }
+            else if (inputVec == Vector2.right)
+            {
+                GameBoard.Instance.OnAnswerInput(Define.InputType.Right);
+            }
         }
     }
 }

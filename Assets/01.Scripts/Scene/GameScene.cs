@@ -7,10 +7,11 @@ public class GameScene : BaseScene
     protected override void Init()
     {
         SceneType = Define.Scene.Game;
+        Managers.Game.Init();
     }
     
     public override void Clear()
     {
-        
+        Managers.Game.Clear();
     }
 }

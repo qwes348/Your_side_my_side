@@ -176,6 +176,7 @@ public class PoolManager
         poolObj.isUsing = false;
         poolDictionary[poolObj.id].Push(poolObj);
         poolObj.gameObject.SetActive(false);
+        poolObj.transform.SetParent(poolParent);
 
         if (currentActivePoolables.Contains(poolObj))
             currentActivePoolables.Remove(poolObj);

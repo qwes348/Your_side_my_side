@@ -13,8 +13,8 @@ public class Managers : MonoBehaviour
     private PoolManager pool = new PoolManager();
     public static PoolManager Pool => Instance.pool;
 
-    // GameManager _game = new GameManager();
-    // public static GameManager Game { get { return Instance._game; } }
+    GameManager _game = new GameManager();
+    public static GameManager Game { get { return Instance._game; } }
 
     private CoroutineManager co = new CoroutineManager();
     public static CoroutineManager Co => Instance.co;

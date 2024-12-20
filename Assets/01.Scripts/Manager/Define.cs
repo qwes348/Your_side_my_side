@@ -7,10 +7,13 @@ public class Define
 {
     #region constant
     
-    public const int MAX_CHARACTERS_COUNT = 50;
+    public const int MAX_CHARACTERS_COUNT = 20;
+    public const int LEVEL_UP_THRESHOLD = 4000;
+    public const int MAX_LEVEL = 4;
+    
     public const float SPECIAL_PROBABILITY = 0.02f;
-    public static readonly Vector3 CORRECT_ANSWER_ANIM_POS_LEFT = new Vector3(-1.5f, -3.5f, 0);
-    public static readonly Vector3 CORRECT_ANSWER_ANIM_POS_RIGHT = new Vector3(1.5f, -3.5f, 0);
+    public const float GAME_INITIAL_TIME = 60f;
+    
     #endregion
 
     #region enum
@@ -54,6 +57,12 @@ public class Define
     {
         Left,
         Right
+    }
+    public enum GameState
+    {
+        None = 0,
+        Running = 1,
+        GameOver = 2
     }
     #endregion
 }

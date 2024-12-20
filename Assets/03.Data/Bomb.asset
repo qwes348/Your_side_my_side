@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fd57c5b80e5d84a8ad1452c52ad02f, type: 3}
   m_Name: Bomb
   m_EditorClassIdentifier: 
-  type: 1
-  character: 100
-  score: 5000
+  characterClass: 1
+  characterType: 100
+  score: 0
