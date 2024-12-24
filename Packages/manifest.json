@@ -44,13 +44,15 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "com.wooshii.hierarchydecorator": "0.9.1"
+    "com.wooshii.hierarchydecorator": "0.9.1",
+    "com.coffee.ui-particle": "5.0.0-preview.11"
   },
   "scopedRegistries": [
     {
       "name": "package.openupm.com",
       "url": "https://package.openupm.com",
       "scopes": [
+        "com.coffee.ui-particle",
         "com.cysharp.unitask",
         "com.dbrizov.naughtyattributes",
         "com.wooshii.hierarchydecorator"

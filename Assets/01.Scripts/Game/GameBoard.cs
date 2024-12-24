@@ -26,6 +26,7 @@ namespace Ysms.Game
         private LineController line;
         private LevelController level;
         private BombGaugeController bombGauge;
+        private FeverController fever;
         #endregion
         
         #region 프로퍼티
@@ -65,11 +66,13 @@ namespace Ysms.Game
             line = GetComponent<LineController>();
             level = GetComponent<LevelController>();
             bombGauge = GetComponent<BombGaugeController>();
+            fever = GetComponent<FeverController>();
                 
             answer.Init();
             line.Init();
             level.Init();
             bombGauge.Init();
+            fever.Init();
 
             line.onLineDequeue += SpawnSingleCharacter;
         }

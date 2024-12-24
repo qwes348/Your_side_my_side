@@ -25,9 +25,9 @@ public class Managers : MonoBehaviour
     // AudioManager _audio = new AudioManager();
     // public static AudioManager Audio { get { return Instance._audio; } }
     //
-    // SceneManagerEx _scene = new SceneManagerEx();
-    // public static SceneManagerEx Scene { get { return Instance._scene; } }
-    //
+    SceneManagerYsms _scene = new SceneManagerYsms();
+    public static SceneManagerYsms Scene => Instance._scene;
+
     // DataManager _data = new DataManager();
     // public static DataManager Data { get { return Instance._data; } }
 

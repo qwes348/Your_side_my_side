@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class BaseScene : MonoBehaviour
 {
-    public Define.Scene SceneType { get; protected set; } = Define.Scene.Start;
+    public Define.Scene SceneType { get; protected set; } = Define.Scene.Title;
 
     void Start()
     {

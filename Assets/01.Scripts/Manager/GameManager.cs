@@ -16,6 +16,8 @@ public class GameManager
     private int level;
     [SerializeField]
     private Define.GameState gameState;
+    [SerializeField]
+    private Define.FeverState feverState;
 
     #region 이벤트
     public Action<float> onTimeUpdate;
@@ -23,6 +25,7 @@ public class GameManager
     public Action<int> onComboUpdate;
     public Action<int> onLevelUpdate;
     public Action<Define.GameState> onGameStateChanged;
+    public Action<Define.FeverState> onFeverStateChanged;
     #endregion
     
     #region 프로퍼티
@@ -55,7 +58,17 @@ public class GameManager
             gameState = value;
             onGameStateChanged?.Invoke(value);
         }
-    } 
+    }
+    public Define.FeverState FeverState
+    {
+        get => feverState;
+        set
+        {
+            Debug.Log($"피버: {value.ToString()}");
+            feverState = value;
+            onFeverStateChanged?.Invoke(value);
+        }
+    }
     #endregion
     
     public void Init()
@@ -64,6 +77,7 @@ public class GameManager
         combo = -1;
         level = 0;
         gameState = Define.GameState.None;
+        feverState = Define.FeverState.Normal;
     }
 
     public void Clear()
@@ -73,11 +87,12 @@ public class GameManager
         onComboUpdate = null;
         onLevelUpdate = null;
         onGameStateChanged = null;
+        onFeverStateChanged = null;
     }
 
     public void AddScore(int add)
     {
-        // TODO: 피버 배수 적용
+        add *= (int)feverState;
         score += add;
         onScoreUpdate?.Invoke(score);
     }
