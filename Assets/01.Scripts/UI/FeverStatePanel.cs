@@ -44,6 +44,9 @@ public class FeverStatePanel : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 피버 연출 초기화
+    /// </summary>
     public void Normal()
     {
         background.DOKill();
@@ -52,6 +55,9 @@ public class FeverStatePanel : MonoBehaviour
         superFeverLoopParticle.Stop();
     }
 
+    /// <summary>
+    /// 피버 UI 연출
+    /// </summary>
     public async UniTask Fever()
     {
         var cg = feverTransform.GetComponent<CanvasGroup>();
@@ -72,6 +78,9 @@ public class FeverStatePanel : MonoBehaviour
         feverTransform.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// 슈퍼 피버 UI 연출
+    /// </summary>
     public async UniTask SuperFever()
     {
         var cg = superFeverTransform.GetComponent<CanvasGroup>();
@@ -80,6 +89,8 @@ public class FeverStatePanel : MonoBehaviour
         cg.alpha = 0.3f;
         starParticle.Play();
         superFeverLoopParticle.Play();
+        background.DOKill();
+        background.DOColor(Color.black, 0.3f);
         superFeverTransform.gameObject.SetActive(true);
         
         superFeverTransform.DOScale(1f, 0.4f);

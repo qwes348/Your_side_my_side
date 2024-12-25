@@ -70,10 +70,14 @@ namespace Ysms.Game
                 Managers.Game.AddScore(outChar.MyCharcterData.score);
                 Managers.Game.Combo += 1;
             }
+
+            Managers.Audio.PlaySfx(Define.Sfx.Move);
         }
 
         public void WrongAnswerSequence()
         {
+            if (DOTween.IsTweening(FrontCharacter.transform))
+                return;
             FrontCharacter.transform.DOShakePosition(0.5f, Vector3.right * 0.3f, 20, fadeOut: false);
         }
 

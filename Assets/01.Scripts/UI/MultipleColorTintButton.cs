@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using Unity.VisualScripting;
+using UnityEngine.EventSystems;
 
 [AddComponentMenu("UI/MultipleButton", 31)]
 public class MultipleColorTintButton : Button
@@ -58,5 +60,12 @@ public class MultipleColorTintButton : Button
     {
         if (targetGraphic == null) return;
         for (int i = 0; i < Graphics.Length; ++i) Graphics[i].CrossFadeColor(targetColor, (!instant) ? colors.fadeDuration : 0f, true, true);
+    }
+
+    public override void OnPointerClick(PointerEventData eventData)
+    {
+        base.OnPointerClick(eventData);
+
+        Managers.Audio.PlaySfx(Define.Sfx.Click);
     }
 }

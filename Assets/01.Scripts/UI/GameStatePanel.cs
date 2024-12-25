@@ -44,7 +44,8 @@ public class GameStatePanel : MonoBehaviour
         startTransform.localScale = Vector3.zero;
         cg.alpha = 0;
         startTransform.gameObject.SetActive(true);
-        
+
+        Managers.Audio.PlaySfx(Define.Sfx.GameStart);
         cg.DOFade(1f, 0.35f);
         await startTransform.DOScale(1f, 0.4f).SetEase(Ease.OutCubic);
         cg.DOFade(0f, 0.5f).OnComplete(() => startTransform.gameObject.SetActive(false));
@@ -59,7 +60,9 @@ public class GameStatePanel : MonoBehaviour
         gameOverTransform.DOLocalMoveY(500f, 0f);
         gameOverTransform.gameObject.SetActive(true);
 
+        Managers.Audio.PlaySfx(Define.Sfx.GameOver);
         await gameOverTransform.DOLocalMoveY(0f, 1f).SetEase(Ease.OutBounce);
-        cg.DOFade(0f, 0.5f).OnComplete(() => gameOverTransform.gameObject.SetActive(false));
+        await cg.DOFade(0f, 0.5f);
+        gameOverTransform.gameObject.SetActive(false);
     }
 }

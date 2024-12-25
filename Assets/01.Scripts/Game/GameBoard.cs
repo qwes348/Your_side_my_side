@@ -52,7 +52,7 @@ namespace Ysms.Game
             {
                 Managers.Game.GameTime -= Time.deltaTime;
                 if (Managers.Game.GameTime <= 0)
-                    Managers.Game.GameState = Define.GameState.GameOver;
+                    GameOver();
             }
         }
 
@@ -83,6 +83,20 @@ namespace Ysms.Game
             await GameUI.Instance.GameStateUI.Ready();
             await GameUI.Instance.GameStateUI.GameStart();
             Managers.Game.GameState = Define.GameState.Running;
+        }
+
+        private async UniTask GameOver()
+        {
+            Managers.Game.GameState = Define.GameState.GameOver;
+
+            if (Managers.Game.Score > Managers.SaveLoad.localSaveData.HighScore)
+            {
+                Managers.SaveLoad.localSaveData.HighScore = Managers.Game.Score;
+                Managers.Game.IsNewHighScore = true;
+            }
+            
+            await GameUI.Instance.GameStateUI.GameOver();
+            Managers.Scene.LoadSceneViaLoading(Define.Scene.Score);
         }
 
         private async UniTask SpawnInitCharacters()

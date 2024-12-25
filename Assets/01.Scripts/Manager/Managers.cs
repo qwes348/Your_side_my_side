@@ -13,8 +13,8 @@ public class Managers : MonoBehaviour
     private PoolManager pool = new PoolManager();
     public static PoolManager Pool => Instance.pool;
 
-    GameManager _game = new GameManager();
-    public static GameManager Game { get { return Instance._game; } }
+    GameManager game = new GameManager();
+    public static GameManager Game { get { return Instance.game; } }
 
     private CoroutineManager co = new CoroutineManager();
     public static CoroutineManager Co => Instance.co;
@@ -22,22 +22,22 @@ public class Managers : MonoBehaviour
     private ResourceManager resource = new ResourceManager();
     public static ResourceManager Resource => Instance.resource;
 
-    // AudioManager _audio = new AudioManager();
-    // public static AudioManager Audio { get { return Instance._audio; } }
-    //
-    SceneManagerYsms _scene = new SceneManagerYsms();
-    public static SceneManagerYsms Scene => Instance._scene;
+    AudioManager audio = new AudioManager();
+    public static AudioManager Audio => Instance.audio;
 
-    // DataManager _data = new DataManager();
-    // public static DataManager Data { get { return Instance._data; } }
+    SceneManagerYsms scene = new SceneManagerYsms();
+    public static SceneManagerYsms Scene => Instance.scene;
+
+    SaveLoadManager saveLoad = new SaveLoadManager();
+    public static SaveLoadManager SaveLoad => Instance.saveLoad;
 
     #endregion
 
-    // void Start()
-    // {
-    //     Screen.SetResolution(Screen.width, (Screen.width * 16) / 9, true);
-    //     Init();
-    // }
+    void Start()
+    {
+        // Screen.SetResolution(Screen.width, (Screen.width * 16) / 9, true);
+        Init();
+    }
 
     static void Init()
     {
@@ -53,12 +53,11 @@ public class Managers : MonoBehaviour
 
             DontDestroyOnLoad(go);
 
-            // Generate_AudioSource();
+            GenerateAudioSource();
 
             instance.pool.Init();
-            // s_instance._data.Init();
-            // s_instance._resource.Init();
-            // s_instance._audio.Init();
+            instance.saveLoad.Init();
+            instance.audio.Init();
         }
     }
 
@@ -67,10 +66,18 @@ public class Managers : MonoBehaviour
         
     }
 
-    // static void Generate_AudioSource()
-    // {
-    //     s_instance._audio.bgmAudioSources = s_instance.gameObject.AddComponent<AudioSource>();
-    //     foreach (Define.SFX sfx in Enum.GetValues(typeof(Define.SFX)))
-    //         s_instance._audio.sfxAudioSources[sfx] = s_instance.gameObject.AddComponent<AudioSource>();
-    // }
+    static void GenerateAudioSource()
+    {
+        var bgm = new GameObject("@BGM", typeof(AudioSource)).GetComponent<AudioSource>();
+        var sfx = new GameObject("@SFX", typeof(AudioSource)).GetComponent<AudioSource>();
+        bgm.transform.SetParent(instance.transform);
+        sfx.transform.SetParent(instance.transform);
+        
+        instance.audio.SetAudioSource(bgm, sfx);
+    }
+
+    private void OnApplicationQuit()
+    {
+        saveLoad.Save();
+    }
 }

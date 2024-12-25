@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using NaughtyAttributes;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
@@ -21,7 +23,6 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     private RectTransform timeRectTransform;
     
-    [FormerlySerializedAs("gameStatePanel")]
     [HorizontalLine]
     [SerializeField]
     private GameStatePanel gameStateUIPanel;
@@ -43,11 +44,6 @@ public class GameUI : MonoBehaviour
         Managers.Game.onScoreUpdate += UpdateScore;
         Managers.Game.onComboUpdate += UpdateCombo;
         Managers.Game.onTimeUpdate += UpdateTime;
-        Managers.Game.onGameStateChanged += state =>
-        {
-            if (state == Define.GameState.GameOver)
-                GameStateUI.GameOver();
-        };
 
         scoreText.text = "0";
         comboText.text = "0";

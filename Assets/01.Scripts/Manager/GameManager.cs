@@ -18,6 +18,8 @@ public class GameManager
     private Define.GameState gameState;
     [SerializeField]
     private Define.FeverState feverState;
+    [SerializeField]
+    private bool isNewHighScore;
 
     #region 이벤트
     public Action<float> onTimeUpdate;
@@ -69,6 +71,11 @@ public class GameManager
             onFeverStateChanged?.Invoke(value);
         }
     }
+    public bool IsNewHighScore
+    {
+        get => isNewHighScore; 
+        set => isNewHighScore = value;
+    }
     #endregion
     
     public void Init()
@@ -76,8 +83,10 @@ public class GameManager
         gameTime = Define.GAME_INITIAL_TIME;
         combo = -1;
         level = 0;
+        score = 0;
         gameState = Define.GameState.None;
         feverState = Define.FeverState.Normal;
+        isNewHighScore = false;
     }
 
     public void Clear()

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 173459d3adc24114aa032bb4b2a321ed
   m_currentHash:
     serializedVersion: 2
-    Hash: 663f28f4475a899992b1ef4dd303cc51
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -49,6 +49,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f08bff539a6076e4182bf742d602d70c, type: 2}
   - {fileID: 11400000, guid: 161fedec3c19e8344a6042e11ee91562, type: 2}
   - {fileID: 11400000, guid: 5d5dcb0115eb63e4ea145cb922eae40a, type: 2}
+  - {fileID: 11400000, guid: 70a13ed7a02715d4cbb589399c578ab5, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -93,6 +94,8 @@ MonoBehaviour:
     - CharacterData
     - Sprite
     - Prefab
+    - Bgm
+    - Sfx
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 3afa1e04f0b8c634caa70e4cac04cbdf, type: 2}

@@ -10,12 +10,16 @@ public class Define
     public const int MAX_CHARACTERS_COUNT = 20;
     public const int LEVEL_UP_THRESHOLD = 4000;
     public const int MAX_LEVEL = 4;
-    public const int FEVER_THRESHOLD = 5;
-    public const int SUPER_FEVER_THRESHOLD = 10;
+    public const int FEVER_THRESHOLD = 10;
+    public const int SUPER_FEVER_THRESHOLD = 25;
     
     public const float SPECIAL_PROBABILITY = 0.02f;
     public const float GAME_INITIAL_TIME = 60f;
-    public const float FEVER_DURATION = 10f;
+    public const float FEVER_DURATION = 3f;
+    public const float DEFAULT_BGM_VOLUME = 0.4f;
+    public const float DEFAULT_SFX_VOLUME = 0.5f;
+
+    public static readonly float[] BGM_PITCH = new float[] { 1.0f, 1.1f, 1.2f };
     
     #endregion
 
@@ -69,9 +73,22 @@ public class Define
     }
     public enum FeverState
     {
-        Normal = 0,
+        Normal = 1,
         Fever = 2,
         SuperFever = 4
+    }
+    public enum Sfx
+    {
+        Move,
+        Click,
+        GameStart,
+        GameOver
+    }
+    public enum Bgm
+    {
+        Title,
+        Game,
+        Score
     }
     #endregion
 }

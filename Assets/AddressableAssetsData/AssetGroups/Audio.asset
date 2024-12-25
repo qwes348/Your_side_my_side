@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Audio
+  m_EditorClassIdentifier: 
+  m_GroupName: Audio
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 6842eece09a7ee840b6e066f8d5e8b6c
+  m_SerializeEntries:
+  - m_GUID: 475f4837af487ce4a9e68bb227455e4c
+    m_Address: Bgm/Title
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bgm
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47f45ef7b5767674393cc401fc325705
+    m_Address: Bgm/Game
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bgm
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df709a4bc39fa4c4d965e5aca1a1c9c8
+    m_Address: Sfx/Move
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sfx
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1af9e61ae98d1fa4e9fc1bb7f493066d
+    m_Address: Sfx/Click
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sfx
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e57ff16e81f618d41bf2dd28389cd20e
+    m_Address: Sfx/GameStart
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sfx
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bea93a38b71b64b598109b3a3b1a0048
+    m_Address: Bgm/Score
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bgm
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7bd8ac36b4715d44b312de18166af02
+    m_Address: Sfx/GameOver
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sfx
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 36441964ffd0bbc4d9f974bbe2ee9fe1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b6ad4bcfc3fc0b244a50404c5b6e85b3, type: 2}
+    - {fileID: 11400000, guid: 9f3c53e92257c774ea015a282bdc17d6, type: 2}

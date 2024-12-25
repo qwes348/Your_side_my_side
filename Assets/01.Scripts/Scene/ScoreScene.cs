@@ -14,11 +14,13 @@ public class ScoreScene : BaseScene
     
     protected override void Init()
     {
-        // TODO: 하이스코어 불러오기
-        newHighScoreObject.SetActive(false);
+        newHighScoreObject.SetActive(Managers.Game.IsNewHighScore);
         
         nowScoreText.text = Managers.Game.Score.ToString("N0");
-        highScoreText.text = "0";
+        highScoreText.text = Managers.SaveLoad.localSaveData.HighScore.ToString("N0");
+
+        Managers.Audio.SetBgmPitch(0);
+        Managers.Audio.PlayBgm(Define.Bgm.Score);
     }
     
     public override void Clear()
@@ -38,6 +40,8 @@ public class ScoreScene : BaseScene
 
     public void ResetHighScore()
     {
-        // TODO: 구현
+        Managers.SaveLoad.localSaveData.HighScore = 0;
+        highScoreText.text = "0";
+        newHighScoreObject.SetActive(false);
     }
 }

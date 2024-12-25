@@ -8,6 +8,7 @@ public class GameScene : BaseScene
     {
         SceneType = Define.Scene.Game;
         Managers.Game.Init();
+        Managers.Audio.PlayBgm(Define.Bgm.Game);
     }
     
     public override void Clear()

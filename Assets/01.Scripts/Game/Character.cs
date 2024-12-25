@@ -30,7 +30,7 @@ namespace Ysms.Game
         {
             myCharcterData = data;
             spriteRenderer = GetComponent<SpriteRenderer>();
-            string addressableKey = new StringBuilder(data.characterType.ToString().ToLower()).Insert(0, "Art/").ToString();
+            string addressableKey = data.GetSpriteAddress();
             spriteRenderer.sprite = await Managers.Resource.LoadAsset<Sprite>(addressableKey);
         }
 
