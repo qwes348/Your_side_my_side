@@ -16,9 +16,6 @@ public class Managers : MonoBehaviour
     GameManager game = new GameManager();
     public static GameManager Game { get { return Instance.game; } }
 
-    private CoroutineManager co = new CoroutineManager();
-    public static CoroutineManager Co => Instance.co;
-
     private ResourceManager resource = new ResourceManager();
     public static ResourceManager Resource => Instance.resource;
 
