@@ -14,7 +14,7 @@ public class Managers : MonoBehaviour
     public static PoolManager Pool => Instance.pool;
 
     GameManager game = new GameManager();
-    public static GameManager Game { get { return Instance.game; } }
+    public static GameManager Game => Instance.game;
 
     private ResourceManager resource = new ResourceManager();
     public static ResourceManager Resource => Instance.resource;

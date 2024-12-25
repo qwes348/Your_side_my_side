@@ -17,6 +17,7 @@ public class LoadingScene : BaseScene
         SceneType = Define.Scene.Loading;
         
         loadingText.DOText("불러오는 중...", 1f).SetLoops(-1, LoopType.Yoyo);
+        Managers.Resource.ReleaseAll();
         LoadNextScene();
     }
     
