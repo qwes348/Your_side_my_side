@@ -25,7 +25,7 @@ namespace Ysms.Game
 
         public void OnScoreUpdate(int score)
         {
-            bombGauge += (1 + Managers.Game.Combo * 0.01f);
+            bombGauge += (1 + Managers.Game.Combo * 0.015f);
             bombSlider.value = bombGauge / 100f;
             if (bombGauge > 100f)
             {

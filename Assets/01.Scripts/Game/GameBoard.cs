@@ -19,6 +19,7 @@ namespace Ysms.Game
         private List<CharacterData> allCharacterDatas;
         // 모든 스페셜 스크립터블 오브젝트 데이터
         private List<CharacterData> allSpecialDatas;
+        private Dictionary<Define.Character, SpecialCharacterExecutor> specialExecutorsDict;
         
         #region 컴포넌트
 
@@ -75,6 +76,13 @@ namespace Ysms.Game
             fever.Init();
 
             line.onLineDequeue += SpawnSingleCharacter;
+            
+            specialExecutorsDict = new Dictionary<Define.Character, SpecialCharacterExecutor>();
+            var executors = GetComponents<SpecialCharacterExecutor>();
+            foreach (var ex in executors)
+            {
+                specialExecutorsDict.Add(ex.CharacterType, ex);
+            }
         }
 
         private async UniTask GameStart()
@@ -138,7 +146,6 @@ namespace Ysms.Game
             // 오답
             else
             {
-                // TODO: 오답연출
                 line.WrongAnswerSequence();
                 Managers.Game.Combo = 0;
             }
@@ -146,20 +153,13 @@ namespace Ysms.Game
 
         private void ApplySpecialCharacter(Character cha)
         {
+            // 스페셜은 100번대
             if ((int)cha.CharacterType < 100)
                 return;
 
-            switch (cha.CharacterType)
-            {
-                case Define.Character.Bomb:
-                    line.DequeueFront();
-                    for (int i = 0; i < 5; i++)
-                    {
-                        var inputType = answer.GetCorrectAnswer(line.FrontCharacter.CharacterType);
-                        line.CorrectAnswerSequence(inputType);
-                    }
-                    break;
-            }
+            var executor = specialExecutorsDict[cha.CharacterType];
+            if(executor != null)
+                executor.Execute();
         }
     }
 }
